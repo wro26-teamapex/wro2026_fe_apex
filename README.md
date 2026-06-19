@@ -1,4 +1,13 @@
 # <p align="center">⛚ WRO 2026 ⛚ Team Apex ⛚ FE Division ⛚</p>
+
+## Team Introduction
+We are a team of three enthusiastic students from **St. Paul’s College, Hong Kong**, participating in the World Robot Olympiad (WRO) Future Engineers category. United by our passion for robotics, innovation, and problem-solving, we strive to learn, collaborate, and break our limits in this international competition. We are proud to represent our school and look forward to competing and connecting with fellow robotics enthusiasts from around the world.
+
+### Contributions
+| Tin Shing Kwan, Amos | Tsang Kwok Cho, Hugo | Tsang Suen Hoi, Jasper |
+| :---: | :---: | :---: |
+| Mechanical Design, Circuit Design, 3D Modeling, Sensor Integration | Software Engineering, MathWorks® Modeling, Mechanical Improvement, Documentation | Wiring, Iteration and Testing, Logistics, Documentation |
+
 ## Table of Contents
 1. Overview  
 &emsp;1.1 About APEX    
