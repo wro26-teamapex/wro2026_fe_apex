@@ -35,4 +35,4 @@
 8. Resources  
 &emsp;8.1 3D CAD Models  
 &emsp;8.2 List of Components  
-&emsp;8.3 Suggestions for Furher Development   
+&emsp;8.3 Suggestions for Further Development   
