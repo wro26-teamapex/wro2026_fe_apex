@@ -104,7 +104,7 @@ A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables eff
 > Our perception pipeline and control logic utilise a robust dual-processor architecture that intelligently splits workloads to ensure high-speed
 > computer vision processing never compromises the deterministic and real-time requirements of driving control. In this system, a Raspberry Pi Zero
 > 2W is dedicated to advanced Python-based vision processing using the Pixy2 camera, performing real-time line tracking, occupancy grid mapping
-> and coloured pillar detection. Meanwhile, the ESP32-S3 executes a deterministic state machine and control algorithms in C++ for instantaneou
+> and coloured pillar detection. Meanwhile, the ESP32-S3 executes a deterministic state machine and control algorithms in C++ for instantaneous
 > motor control, sensor fusion (IMU and dual ToF sensors), and low-level PID regulation. This separation of concerns delivers both computational
 > efficiency and reliable real-time performance.
 
