@@ -110,6 +110,31 @@ A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables eff
 
 ### Robot Images
 
+Six required views of APEX. _(Placeholders — drop your real photos into [`v-photos/`](./v-photos).)_
+
+<br/>
+
+<table>
+  <tr>
+    <td><img src="./v-photos/front.svg" alt="Front view" width="100%"></td>
+    <td><img src="./v-photos/back.svg" alt="Back view" width="100%"></td>
+    <td><img src="./v-photos/left.svg" alt="Left view" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Front</sub></td><td align="center"><sub>Back</sub></td><td align="center"><sub>Left</sub></td>
+  </tr>
+  <tr>
+    <td><img src="./v-photos/right.svg" alt="Right view" width="100%"></td>
+    <td><img src="./v-photos/top.svg" alt="Top view" width="100%"></td>
+    <td><img src="./v-photos/bottom.svg" alt="Bottom view" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Right</sub></td><td align="center"><sub>Top</sub></td><td align="center"><sub>Bottom</sub></td>
+  </tr>
+</table>
+
+<br/>
+
 ### Performance Video
 
 <div align="center">
@@ -168,6 +193,32 @@ A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables eff
 ---
 
 ## Engineering Process - PRIMES Framework  
+
+The PRIMES Framework is our overarching, model-based systems engineering workflow for the entire WRO project. It defines how we approach the full development lifecycle — from initial concept and mechanical design through to control implementation, testing, optimization, and final validation.
+
+At its core, PRIMES enforces a disciplined, iterative process that deeply integrates MATLAB, Simulink, and Simscape throughout every stage of engineering. Simulation is not an afterthought or simple graphing tool; it is a primary driver of design decisions, risk reduction, and performance improvement.
+
+**Core Philosophy**
+Model → Simulate → Validate against real hardware → Iterate.
+What PRIMES Stands For
+- Prototype Create high-fidelity digital prototypes (plant models, controllers, sensor systems, and powertrain) using MATLAB/Simulink/Simscape before committing to physical hardware.
+- Refine Use simulation to rapidly explore design alternatives, optimize parameters, and test scenarios that would be difficult or time-consuming to evaluate physically.
+- Integrate Seamlessly bridge virtual models with real-world components through Hardware-in-the-Loop (HIL) testing, Embedded Coder code generation, and real-time interfaces.
+- Measure Collect detailed performance data from the physical vehicle and test setups, then quantitatively compare it against simulation results to validate model accuracy.
+- Evaluate Analyze results, identify gaps between simulation and reality, assess key metrics (lap time, stability, energy efficiency, sensor reliability, etc.), and determine root causes of discrepancies.
+- Systematize (Iterate) Formalize lessons learned, update models/mechanical designs/controllers, and systematically iterate through the cycle until targets are achieved.
+
+**Application Across the Project**
+We applied the PRIMES framework holistically across all aspects of development:
+- Mechanical design and vehicle dynamics
+- Electrical and powertrain systems
+- Control algorithms (PID speed & steering)
+- Computer vision and sensor processing (Pixy2)
+- Energy efficiency analysis
+- Lap time optimization and parametric studies
+- Overall system integration and track testing
+
+This structured approach enabled strong correlation between virtual predictions and actual performance, minimized physical prototyping iterations, and allowed data-driven decisions throughout the project.
 
 --- 
 
