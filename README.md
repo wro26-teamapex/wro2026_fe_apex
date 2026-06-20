@@ -187,6 +187,35 @@ A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables eff
 
 ## Acknowledgement
 
+We would like to express our sincere gratitude to everyone who supported us throughout this challenging yet rewarding journey. 
+
+We are especially thankful to **Mr. H. T. Tsui** for providing patient guidance, tireless support during countless debugging sessions, and constantly inspiring us to push beyond our limits. 
+
+We extend our deep appreciation to **St. Paul's College** for generously providing dedicated workspace, access to essential equipment, and logistical travel support that enabled us to participate in the competition. 
+
+Our heartfelt thanks go to the **WRO Association** for organising this remarkable international competition that continues to drive innovation and engineering excellence among students worldwide. 
+
+Finally, we acknowledge the invaluable contributions of the **open-source community**, including the developers of OpenCV, Python, the Raspberry Pi Foundation, PixyCam, and all other libraries and tools whose collective efforts have powerfully supported the realisation of our autonomous vehicle.
+
 ---
 
+</div>
+
 ## License
+
+Released under the **MIT License** — see [`LICENSE`](./LICENSE). Learn from and build on APEX freely. A mention back to **Team APEX** is always appreciated. 
+
+</div>
+
+---
+
+<div align="center">
+
+**Built with curiosity, simulation, and a lot of testing by Team APEX**
+
+*WRO Future Engineers · Season 2026 · Hong Kong*
+
+[![WRO](https://img.shields.io/badge/World%20Robot%20Olympiad-Future%20Engineers-0066CC?style=flat-square)](https://wro-association.org/competition/future-engineers/)
+[![GitHub](https://img.shields.io/badge/GitHub-WRO2026_FE_Apex-181717?style=flat-square&logo=github)](https://github.com/HT-alpha/WRO-Internal)
+
+</div>
