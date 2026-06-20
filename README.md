@@ -6,7 +6,7 @@ We are a team of three enthusiastic students from **St. Paul’s College, Hong K
 ### Contributions
 | Tin Shing Kwan, Amos | Tsang Kwok Cho, Hugo | Tsang Suen Hoi, Jasper |
 | :---: | :---: | :---: |
-| Mechanical Design, Circuit Design, 3D Modeling, Sensor Integration | Software Engineering, MathWorks® Modeling, Mechanical Improvement, Documentation | Wiring, Iteration and Testing, Logistics, Documentation |
+| Mechanical Design, Circuit Design, 3D Modelling, Sensor Integration | Software Engineering, MathWorks® Modeling, Mechanical Improvement, Documentation | Wiring, Iteration and Testing, Logistics, Documentation |
 
 ## Table of Contents
 1. Overview  
