@@ -1,14 +1,13 @@
-# WRO Future Engineers — Team APEX
+# WRO 2026 Future Engineers — Team APEX
 <br/>
 
 <div align="center">
   
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/WRO-Future%20Engineers-3B82F6?style=for-the-badge&logo=futurelearn&logoColor=white" alt="WRO Future Engineers"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Season-2026-22D3EE?style=for-the-badge" alt="Season 2026"></a>
   <a href="#-software-architecture"><img src="https://img.shields.io/badge/Language-Python_;_C++-FFD43B?style=for-the-badge&logo=python&logoColor=black" alt="Python"></a>
   <a href="#-software-architecture"><img src="https://img.shields.io/badge/Platform-Raspberry%20Pi_;_ESP32-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi"></a>
-  <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=for-the-badge" alt="MIT License"></a>
+  <a href="#-license"><img src="<a href="#-license"><img src="<a href="#-license"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=for-the-badge" alt="MIT License"></a>"></a>
+  
 </p>
 
 <p align="center">
