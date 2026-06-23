@@ -33,9 +33,9 @@
 &emsp;1.3 Performance Video  
 
 2. Mobility and Mechanical Design  
-&emsp;2.1 Drivetrain  
+&emsp;2.1 Powertrain  
 &emsp;2.2 Steering Mechanism  
-&emsp;2.3 Differential System  
+&emsp;2.3 Drivetrain  
 &emsp;2.4 Chassis Design (Distribution; Aerodynamics)  
 &emsp;2.5 Stability Improvement  
 
@@ -84,6 +84,7 @@ APEX is an ultra-compact autonomous vehicle engineered for exceptional speed, ag
 The vehicle incorporates a full Ackermann steering mechanism, a rear mechanical differential, and an active downforce system to optimise cornering performance and stability at high speeds. Inspired by the innovative Formula 1 car Brabham BT46B, APEX is designed to achieve remarkable cornering velocities, reflected in its name. 
 
 A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables efficient task distribution: Python-based vision processing with the Pixy2 camera runs seamlessly alongside fast C++ control algorithms on the ESP32. Powered by a high-discharge 2S LiPo battery, APEX intelligently fuses data from dual Time-of-Flight (ToF) sensors and an IMU to deliver precise navigation, reliable obstacle handling, and automated parallel parking.
+
 
 > [!NOTE]
 > ## Specialties
@@ -148,11 +149,11 @@ Six required views of APEX. _(Placeholders — drop your real photos into [`v-ph
 ---
 ## Mobility and Mechanical Design
 
-### 2.1 Drivetrain  
+### 2.1 Powertrain  
 
 ### 2.2 Steering Mechanism  
 
-### 2.3 Differential System  
+### 2.3 Drivetrain  
 
 ### 2.4 Chassis Design (Distribution; Aerodynamics)  
 
