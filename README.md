@@ -151,10 +151,15 @@ Six required views of APEX. _(Placeholders — drop your real photos into [`v-ph
 
 ### 2.1 Powertrain  
 
-**N20 importance**
+| Image | Specification |
+| :---: | :--- |
+| ![N20 Motor](<MD Resources/N20 Motor.jpg>) | **N20 Specification**<br><br>• **Voltage:** 6V<br>• **No-loaded speed:** 1500 rpm<br>• **Gearbox:** GA12<br>• **Gearbox Size:** 15mm × 12mm × 10mm<br>• **Total length:** 35mm |
+
+**N20 importance**  
 With the N20 motor, the front wheels do not have to steer and drive at the same time, so the car is easier to control and the steering is more responsive.
 The rear wheels push the car forward, which gives cleaner handling in turns than a layout where the front wheels must both pull and steer.
-Why is it better than the N10, larger or stepper motor?
+
+**Why is it better than the N10, larger or stepper motor?**  
 The N20 micro motor with encoder is small and light enough to fit inside our compact robot when providing quick response for the close-loop control. Compared with N10 motor, N20 motor can offer more torque and better practical drive capability, it can also gain car performance without the chassis being too small. For larger or stepper motors, it is better suited to our small apex car chassis, and its encoder support also improves speed regulation and autonomous driving accuracy.
 
 ### 2.2 Steering Mechanism  
