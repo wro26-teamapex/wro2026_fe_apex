@@ -3,10 +3,10 @@
 
 ## Table of Contents
 
-1. Overview  
-&emsp;1.1 About APEX    
-&emsp;1.2 Robot Images  
-&emsp;1.3 Performance Video  
+1. [Overview](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#overview)    
+&emsp;1.1 [About APEX](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#about-team-apex)    
+&emsp;1.2 [Robot Images](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#robot-images)  
+&emsp;1.3 [Performance Video](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#performance-video)  
 
 2. Mobility and Mechanical Design  
 &emsp;2.1 Powertrain  
@@ -65,25 +65,20 @@ A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables eff
 > [!NOTE]
 > ## Specialties
 > 
-> **Downforce Generation System**
+> **Downforce Generation System**  
+> The active downforce generation system utilizes a fan to create a vacuum at the belly of the car, creating constant downforce which improves grip and minimises skidding, allowing the car to
+> move at much higher speeds during turns.  
+> [In-depth explanation in Section 2.5](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#25-stability-improvement)
 >
-> APEX features an innovative active downforce generation system designed to enhance stability and cornering performance at high speeds. The system > employs strategically placed aerodynamic elements that create downward pressure, improving traction and minimising slippage during sharp turns on > the WRO track.
-> 
-> **Hybrid Snap-to-Fit and Screwed-in Design**
-> 
-> A hybrid snap-to-fit and screwed-in design philosophy was adopted for the chassis and body components. This modular approach enables rapid
-> prototyping, easy maintenance, and quick repairs during competition iterations. By minimising the number of screws, we significantly reduced 
-> overall weight and mechanical complexity while preserving structural integrity. Critical components such as the motors and steering servo are
-> securely screwed in place to provide maximum stability and vibration resistance under high-speed operation.
+> **Hybrid Fitting Design**  
+> APEX adopts snap-to-fit designs for most chassis plastic components, while using hex and nut bearings to fixate motors. The snap to fit design allows layers of the chassis to be replaced
+> swiftly, hence faster repairs and prototyping. On the contrary, hex and nut provide great stability for dynamic components such as motors.  
+> [In-depth explanation in Section 2.4](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
 >
-> **Dual-Processor Architecture**
->
-> Our perception pipeline and control logic utilise a robust dual-processor architecture that intelligently splits workloads to ensure high-speed
-> computer vision processing never compromises the deterministic and real-time requirements of driving control. In this system, a Raspberry Pi Zero
-> 2W is dedicated to advanced Python-based vision processing using the Pixy2 camera, performing real-time line tracking, occupancy grid mapping
-> and coloured pillar detection. Meanwhile, the ESP32-S3 executes a deterministic state machine and control algorithms in C++ for instantaneous
-> motor control, sensor fusion (IMU and dual ToF sensors), and low-level PID regulation. This separation of concerns delivers both computational
-> efficiency and reliable real-time performance.
+> **Heterogeneous Architecture**  
+> Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry Pi Zero 2W processes vision and navigation, while the Arduino Nano ESP32 manages sensor and motor control.  
+> [In-depth explanation in Section 3.3](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
+
 
 ### Robot Images
 
