@@ -1,28 +1,4 @@
 # WRO 2026 Future Engineers — Team APEX
-<br/>
-
-<div align="center">
-  
-<p align="center">
-  <a href="#-software-architecture"><img src="https://img.shields.io/badge/Language-Python_;_C++-FFD43B?style=for-the-badge&logo=python&logoColor=black" alt="Python"></a>
-  <a href="#-software-architecture"><img src="https://img.shields.io/badge/Platform-Raspberry%20Pi_;_ESP32-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" alt="Raspberry Pi"></a>
-  <a href="#-license"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white
-"></a>
-  
-</p>
-
-<p align="center">
-  <b>An autonomous, self-driving model car built for the World Robot Olympiad — Future Engineers category.</b><br>
-  <sub>Computer-vision lane following · colour-based obstacle avoidance · IMU lap counting</sub>
-</p>
-
-<br/>
-
-> *“The trick to having good ideas is not to sit around in glorious isolation and try to think big thoughts. The trick is to get more parts on the table.” – Steven Johnson*
-
-<br/>
-
----
 </div>
 
 ## Table of Contents
