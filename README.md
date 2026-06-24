@@ -151,7 +151,41 @@ Six required views of APEX. _(Placeholders — drop your real photos into [`v-ph
 
 ### 2.1 Powertrain  
 
+**N20 importance**
+With the N20 motor, the front wheels do not have to steer and drive at the same time, so the car is easier to control and the steering is more responsive.
+The rear wheels push the car forward, which gives cleaner handling in turns than a layout where the front wheels must both pull and steer.
+Why is it better than the N10, larger or stepper motor?
+The N20 micro motor with encoder is small and light enough to fit inside our compact robot when providing quick response for the close-loop control. Compared with N10 motor, N20 motor can offer more torque and better practical drive capability, it can also gain car performance without the chassis being too small. For larger or stepper motors, it is better suited to our small apex car chassis, and its encoder support also improves speed regulation and autonomous driving accuracy.
+
 ### 2.2 Steering Mechanism  
+
+**Why Use Ackermann Steering?**
+<table>
+  <tr>
+    <th>Steering Type</th>
+    <th>Issue / Benefit</th>
+  </tr>
+  <tr bgcolor="#FFD2D2">
+    <td>Parallel linkage</td>
+    <td>Tires scrub in tight corners, vibrating the chassis and breaking the critical vacuum seal</td>
+  </tr>
+  <tr bgcolor="#FFD2D2">
+    <td>Articulated steering</td>
+    <td>Moving chassis joints let air leak in, destroying the vacuum for active downforce</td>
+  </tr>
+  <tr bgcolor="#FFD2D2">
+    <td>3-wheeler</td>
+    <td>Unstable platform hinders sensor detection</td>
+  </tr>
+  <tr bgcolor="#FFD2D2">
+    <td>Anti-ackermann steering</td>
+    <td>Turns the outer wheel sharper, causing front-end sliding and loss of suction</td>
+  </tr>
+  <tr bgcolor="#D2FFD2">
+    <td>👑Ackermann steering</td>
+    <td>Tire slip elimination, chassis remains flat</td>
+  </tr>
+</table>
 
 ### 2.3 Drivetrain  
 
