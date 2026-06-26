@@ -3,11 +3,11 @@
 
 ## Table of Contents
 
-1. [Overview](https://github.com/wro26-teamapex/WRO2026_FE_Apex#overview)    
-&emsp;1.1 [About APEX](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#about-team-apex)  
-&emsp;1.2 [Specialties]([a](https://github.com/wro26-teamapex/WRO2026_FE_Apex#specialties))  
-&emsp;1.2 [Robot Images](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#robot-images)  
-&emsp;1.3 [Performance Video](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#performance-video)  
+1. [Overview](https://github.com/wro26-teamapex/WRO2026_FE_Apex#1-overview)    
+&emsp;1.1 [About APEX](https://github.com/wro26-teamapex/WRO2026_FE_Apex#about-apex)  
+&emsp;1.2 [Specialties](https://github.com/wro26-teamapex/WRO2026_FE_Apex#specialties)  
+&emsp;1.2 [Robot Images](https://github.com/wro26-teamapex/WRO2026_FE_Apex#robot-images)  
+&emsp;1.3 [Performance Videos](https://github.com/wro26-teamapex/WRO2026_FE_Apex#performance-videos)  
 
 3. Mobility and Mechanical Design  
 &emsp;2.1 Chassis Design  
@@ -40,6 +40,12 @@
 &emsp;8.1 3D CAD Models  
 &emsp;8.2 List of Components  
 &emsp;8.3 Suggestions for Further Development   
+
+---
+## Extra Details
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)  
+[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=sagemath)](link)  
+[![Components List](https://img.shields.io/badge/⚙%20Components%20List-114580?style=for-the-badge&logo=)](link)
 
 ---
 
