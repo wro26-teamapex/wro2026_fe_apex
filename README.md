@@ -3,39 +3,40 @@
 
 ## Table of Contents
 
-1. [Overview](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#overview)    
-&emsp;1.1 [About APEX](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#about-team-apex)    
+1. [Overview](https://github.com/wro26-teamapex/WRO2026_FE_Apex#overview)    
+&emsp;1.1 [About APEX](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#about-team-apex)  
+&emsp;1.2 [Specialties]([a](https://github.com/wro26-teamapex/WRO2026_FE_Apex#specialties))  
 &emsp;1.2 [Robot Images](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#robot-images)  
 &emsp;1.3 [Performance Video](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#performance-video)  
 
-2. Mobility and Mechanical Design  
-&emsp;2.1 Powertrain  
-&emsp;2.2 Steering Mechanism  
-&emsp;2.3 Drivetrain  
-&emsp;2.4 Chassis Design (Distribution; Aerodynamics)  
-&emsp;2.5 Stability Improvement  
+3. Mobility and Mechanical Design  
+&emsp;2.1 Chassis Design  
+&emsp;2.2 Powertrain  
+&emsp;2.3 Steering Mechanism  
+&emsp;2.4 Stability Improvements  
 
-3. Power and Sensor Architecture  
+
+4. Power and Sensor Architecture  
 &emsp;3.1 Power Source  
 &emsp;3.2 Camera and Sensors  
 &emsp;3.3 Dual Core System  
 &emsp;3.4 Circuit Diagram  
 &emsp;3.5 Power Consumption Modeling  
 
-4. Software Architecture  
+5. Software Architecture  
 &emsp;4.1 Open Challenge  
 &emsp;4.2 Obstacle Challenge  
 &emsp;4.3 Parallel Parking  
 &emsp;4.4 Code Structure   
 &emsp;4.5 Instructions  
 
-5. MathWorks® Modeling - SPARK Model  
+6. MathWorks® Modeling - SPARK Model  
 
-6. Engineering Process - PRIMES Framework  
+7. Engineering Process - PRIMES Framework  
 
-7. Building Instructions for Reproducibility  
+8. Building Instructions for Reproducibility  
 
-8. Resources  
+9. Resources  
 &emsp;8.1 3D CAD Models  
 &emsp;8.2 List of Components  
 &emsp;8.3 Suggestions for Further Development   
@@ -51,40 +52,32 @@ We are a team of three enthusiastic students from **St. Paul’s College, Hong K
 | Mechanical Design, Circuit Design, 3D Modelling, Sensor Integration | Software Engineering, MathWorks® Modeling, Mechanical Improvement, Documentation | Wiring, Iteration and Testing, Logistics, Documentation |
 
 ---
-## Overview
-
-### About Team APEX
-
-APEX is an ultra-compact autonomous vehicle engineered for exceptional speed, agility, and precision for the Future Engineers category. 
-
-The vehicle incorporates a full Ackermann steering mechanism, a rear mechanical differential, and an active downforce system to optimise cornering performance and stability at high speeds. Inspired by the innovative Formula 1 car Brabham BT46B, APEX is designed to achieve remarkable cornering velocities, reflected in its name. 
-
-A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables efficient task distribution: Python-based vision processing with the Pixy2 camera runs seamlessly alongside fast C++ control algorithms on the ESP32. Powered by a high-discharge 2S LiPo battery, APEX intelligently fuses data from dual Time-of-Flight (ToF) sensors and an IMU to deliver precise navigation, reliable obstacle handling, and automated parallel parking.
-
-
-> [!NOTE]
-> ## Specialties
-> 
-> **Downforce Generation System**  
-> The active downforce generation system utilizes a fan to create a vacuum at the belly of the car, creating constant downforce which improves grip and minimises skidding, allowing the car to
-> move at much higher speeds during turns.  
-> [In-depth explanation in Section 2.5](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#25-stability-improvement)
+## 1. Overview
+>### About APEX
+>APEX is an ultra-compact autonomous vehicle engineered for exceptional speed, agility, and precision for the Future Engineers category.
 >
-> **Hybrid Fitting Design**  
-> APEX adopts snap-to-fit designs for most chassis plastic components, while using hex and nut bearings to fixate motors. The snap to fit design allows layers of the chassis to be replaced
-> swiftly, hence faster repairs and prototyping. On the contrary, hex and nut provide great stability for dynamic components such as motors.  
-> [In-depth explanation in Section 2.4](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
+>The vehicle incorporates a full Ackermann steering mechanism, a rear mechanical differential, and an active downforce system to optimise cornering performance and stability at high speeds. Inspired by the innovative Formula 1 car Brabham BT46B, APEX is designed to achieve remarkable cornering velocities, reflected in its name.
 >
-> **Heterogeneous Architecture**  
-> Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry Pi Zero 2W processes vision and navigation, while the Arduino Nano ESP32 manages sensor and motor control.  
-> [In-depth explanation in Section 3.3](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
+>A dual-core architecture combining an ESP32 and Raspberry Pi Zero 2W enables efficient task distribution: Python-based vision processing with the Pixy2 camera runs seamlessly alongside fast C++ control algorithms on the ESP32. Powered by a high-discharge 2S LiPo battery, APEX intelligently fuses data from dual Time-of-Flight (ToF) sensors and an IMU to deliver precise navigation, reliable obstacle handling, and automated parallel parking.
+
+### Specialties
+
+🞙 **Downforce Generation System**  
+The active downforce generation system utilizes a fan to create a vacuum at the belly of the car, creating constant downforce which improves grip and minimises skidding, allowing the car to
+move at much higher speeds during turns.  
+[In-depth explanation in Section 2.5](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#25-stability-improvement)
+
+🞙 **Hybrid Fitting Design**  
+APEX adopts snap-to-fit designs for most chassis plastic components, while using hex and nut bearings to fixate motors. The snap to fit design allows layers of the chassis to be replaced
+swiftly, hence faster repairs and prototyping. On the contrary, hex and nut provide great stability for dynamic components such as motors.  
+[In-depth explanation in Section 2.4](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
+
+🞙 **Heterogeneous Architecture**  
+Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry Pi Zero 2W processes vision and navigation, while the Arduino Nano ESP32 manages sensor and motor control.  
+[In-depth explanation in Section 3.3](https://github.com/wro26-teamapex/WRO2026_FE_Apex/edit/main/README.md#24-chassis-design-distribution-aerodynamics)
 
 
 ### Robot Images
-
-Six required views of APEX. _(Placeholders — drop your real photos into [`v-photos/`](./v-photos).)_
-
-<br/>
 
 <table>
   <tr>
@@ -105,69 +98,22 @@ Six required views of APEX. _(Placeholders — drop your real photos into [`v-ph
   </tr>
 </table>
 
-<br/>
+### Performance Videos
 
-### Performance Video
-
-<div align="center">
-
-[![Demo Video](https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
-
-</div>
-
-> See `link` for the direct link to our driving demonstration on YouTube (minimum 30 seconds of autonomous driving per competition rules).
+[![Demo Video](https://img.shields.io/badge/Introductory-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
+[![Demo Video](https://img.shields.io/badge/Open%20Challenge-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
+[![Demo Video](https://img.shields.io/badge/Obstacle%20Challenge-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
 
 ---
 ## Mobility and Mechanical Design
 
-### 2.1 Powertrain  
+### 2.1 Chassis Design
 
-| Image | Specification |
-| :---: | :--- |
-| ![N20 Motor](<MD Resources/N20 Motor.jpg>) | **N20 Specification**<br><br>• **Voltage:** 6V<br>• **No-loaded speed:** 1500 rpm<br>• **Gearbox:** GA12<br>• **Gearbox Size:** 15mm × 12mm × 10mm<br>• **Total length:** 35mm |
+### 2.2 Powertrain  
 
-**N20 importance**  
-With the N20 motor, the front wheels do not have to steer and drive at the same time, so the car is easier to control and the steering is more responsive.
-The rear wheels push the car forward, which gives cleaner handling in turns than a layout where the front wheels must both pull and steer.
+### 2.3 Steering Mechanism  
 
-**Why is it better than the N10, larger or stepper motor?**  
-The N20 micro motor with encoder is small and light enough to fit inside our compact robot when providing quick response for the close-loop control. Compared with N10 motor, N20 motor can offer more torque and better practical drive capability, it can also gain car performance without the chassis being too small. For larger or stepper motors, it is better suited to our small apex car chassis, and its encoder support also improves speed regulation and autonomous driving accuracy.
-
-### 2.2 Steering Mechanism  
-
-**Why Use Ackermann Steering?**
-<table>
-  <tr>
-    <th>Steering Type</th>
-    <th>Issue / Benefit</th>
-  </tr>
-  <tr bgcolor="#FFD2D2">
-    <td>Parallel linkage</td>
-    <td>Tires scrub in tight corners, vibrating the chassis and breaking the critical vacuum seal</td>
-  </tr>
-  <tr bgcolor="#FFD2D2">
-    <td>Articulated steering</td>
-    <td>Moving chassis joints let air leak in, destroying the vacuum for active downforce</td>
-  </tr>
-  <tr bgcolor="#FFD2D2">
-    <td>3-wheeler</td>
-    <td>Unstable platform hinders sensor detection</td>
-  </tr>
-  <tr bgcolor="#FFD2D2">
-    <td>Anti-ackermann steering</td>
-    <td>Turns the outer wheel sharper, causing front-end sliding and loss of suction</td>
-  </tr>
-  <tr bgcolor="#D2FFD2">
-    <td>👑Ackermann steering</td>
-    <td>Tire slip elimination, chassis remains flat</td>
-  </tr>
-</table>
-
-### 2.3 Drivetrain  
-
-### 2.4 Chassis Design (Distribution; Aerodynamics)  
-
-### 2.5 Stability Improvement
+### 2.4 Stability Improvements
 
 ---
 
