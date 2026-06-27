@@ -270,9 +270,133 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 
 ### 3.4 Circuit Diagram  
 
-### 3.5 Power Consumption Modeling 
+### 3.5 Power Consumption Modeling  
+Powered by a nominal **2S LiPo (7.4 V)** source, the model tracks steady-state and transient power allocations across downstream **12V thermal** and **5V logic** subsystems. By mapping conversion inefficiencies and component-level duty cycles, the model evaluates hardware safety margins, verifies over-current protection boundaries, and links battery state-of-charge (SoC) degradation directly to dynamic on-track performance degradation.
+
+<details>
+<summary>Explicit Modeling Assumptions & Simplifications</summary>
+  
+---
+  
+To maintain a bounded, deterministic state space for calculations, the model operates under the following explicitly declared structural simplifications:
+
+- **Ideal Single-Node Common Ground**: The complete system ground network (GND) is treated as a zero-resistance, ideal reference node; ground-loop impedances, trace parasitics, and return-path switching noise are omitted.
+- **Flat Nominal Rail Bus**: Primary electrical budget segments hold the source battery potential static at a nominal **2S LiPo voltage (7.4 V)**. Voltage sag originating from internal cell resistance ($R_{\text{int}}$) and non-linear discharge capacity variations are decoupled into a discrete state-of-charge evaluation (Section 3.5.4).
+- **Cascaded Rail Folding**: The **3.3 V** downstream logic rail (powering the VL53L1X ToF arrays and the MPU6050 IMU) is structurally folded into the Arduino Nano ESP32 $\text{V}_{\text{IN}}$ pin current budget at the **5V** level to prevent downstream algebraic double-counting on the upstream buck converter.
 
 ---
+</details>
+
+<details>
+<summary>Mathematical Formulation & Multi-Rail Budgeting</summary>
+
+---
+
+The vehicle topology is constructed as an explicit data structure containing discrete current states ($\vec{I}_k$), corresponding localized time duty fractions ($\vec{D}_k$), and absolute transient peak currents ($I_{\text{peak}, k}$).
+
+The duty-weighted average current for any arbitrary load element $k$ is governed by:
+
+$$
+I_{\text{avg}, k} = \sum_{m=1}^{M} I_{k, m} \cdot D_{k, m} \quad \text{where} \quad \sum_{m=1}^{M} D_{k, m} = 1.0
+$$
+
+The input power ($P_{\text{in}}$) and supply current ($I_{\text{in}}$) drawn from the primary **7.4 V** bus through an arbitrary switching regulator operating at an efficiency coefficient $\eta$ are computed via power-balance transformations:
+
+$$
+P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{V_{\text{out}} \cdot \sum I_{\text{avg}, \text{loads}}}{\eta} \quad \text{and} \quad I_{\text{in}} = \frac{P_{\text{in}}}{V_{\text{in}}}
+$$
+
+---
+</details>
+
+<details>
+<summary>Electrical Subsystem Parameters</summary>
+
+---
+The underlying parameters are categorized into specific hardware domains sourced directly from component datasheets, bench measurements, or conservative engineering bounds:
+
+Primary Source (Battery)
+| Parameter Metric              | Value                          | Characterization Type |
+|-------------------------------|--------------------------------|-----------------------|
+| Battery Chemistry / Config    | 2S LiPo (7.4 V Nominal)       | DATASHEET            |
+| Pack Nameplate Capacity       | 300 mAh (0.3 Ah)               | CONFIRM              |
+| Max Continuous Discharge      | 20C (6.0 A Safe Limit)        | CONFIRM              |
+
+Drivetrain Actuation
+| Parameter Metric              | Value                          | Characterization Type |
+|-------------------------------|--------------------------------|-----------------------|
+| N20 Motor Run Current         | 0.35 A                         | ESTIMATE             |
+| N20 Motor Stall Current       | 1.50 A                         | CONFIRM              |
+| TB6612FNG Driver Limit        | 1.2 A Continuous / 3.2 A Peak | DATASHEET            |
+
+12V Thermal Rail
+| Parameter Metric              | Value                                      | Characterization Type |
+|-------------------------------|--------------------------------------------|-----------------------|
+| KOOBOOK Boost Regulator       | η = 85%, $I_{\text{max, out}}$ = 1.0 A    | ESTIMATE / CONFIRM   |
+| Delta BFB0312HA-C Fan         | 12V Nominal, 0.84 W (0.07 A Rated)        | DATASHEET            |
+
+5V Logic & Control
+| Parameter Metric                  | Value                                           | Characterization Type |
+|-----------------------------------|-------------------------------------------------|-----------------------|
+| Synchronous Buck Regulator        | η = 92%, $I_{\text{rated}}$ = 3.0 A            | ESTIMATE / CONFIRM   |
+| Raspberry Pi Zero 2W              | 0.15 A Idle / 0.35 A Typ / 0.70 A Peak         | ESTIMATE             |
+| High-Torque Steering Servo        | 0.01 A Idle / 0.10 A Typ / 0.80 A Stall        | ESTIMATE / CONFIRM   |
+| Arduino Nano ESP32                | 0.08 A Typ / 0.18 A Peak (Measured at $\text{V}_{\text{IN}}$) | ESTIMATE |
+
+---
+</details>
+
+<details>
+<summary>Safety Margins & System Pass/Fail Verification</summary>
+
+---
+To ensure hardware survivability during transient faults or mechanical lockups, the system computes structural operating margins against defined alert thresholds:
+
+**SYSTEM SAFETY MARGIN VERIFICATION**
+- **[PASS]** Power Balance Verification: Total Battery Power == Useful Power + Conversion Losses (Within 0.01 W)
+- **[OK]** TB6612FNG Continuous Margin: **3.43x** (Threshold: ≥ 1.5x)
+- **[OK]** TB6612FNG Stall Margin: **2.13x** (Threshold: ≥ 1.0x)
+- **[OK]** Buck Converter Peak Margin: **1.79x** (Threshold: ≥ 1.3x)
+- **[OK]** Boost Converter Margin: **14.29x** (Threshold: ≥ 1.3x)
+- **[OK]** Battery C-rating Margin: **8.79x** (Threshold: ≥ 2.0x)
+
+> [!WARNING] 
+> The script embeds native runtime exceptions to prevent component destruction. If a physical jam occurs, the N20 stall current (1.50 A) remains safely below the driver's 3.2 A pulse threshold. However, if any system modifications decrease the battery C-rating margin below **2.0x** or reduce the cumulative competition-day charge margin below **1.0x**, a compiler warning is thrown to enforce a mid-day battery swap or a safe firmware-level sleep implementation.
+
+---
+</details>
+
+<details>
+<summary>Safety Margins & System Pass/Fail Verification</summary>
+**3.5.5 State-of-Charge & Dynamic Voltage Sag Extension**
+  
+---
+The model introduces a sag-aware coupling framework. Regulated-rail components behave as constant power sinks ($P$), forcing battery draw ($I_{\text{load}}$) to escalate as cell open-circuit voltage (OCV) decays.
+
+The terminal voltage under load ($V_{\text{term}}$) is solved deterministically at each **5% SoC** step by taking the principal physical root of the quadratic expression:
+
+$$
+V_{\text{term}}^2 - \text{OCV}(\text{SoC}) \cdot V_{\text{term}} + P \cdot R_{\text{int}} = 0 \implies V_{\text{term}} = \frac{\text{OCV}(\text{SoC}) + \sqrt{\text{OCV}(\text{SoC})^2 - 4 \cdot P \cdot R_{\text{int}}}}{2}
+$$
+
+As the pack drains from **100%** charge down to its **80%** usable capacity floor (20% remaining SoC), the terminal voltage falls from **8.16 V** to **7.16 V**. This reduction directly drops the motor’s no-load RPM, imposing a **+4.8% lap-time slowdown penalty** (15.00 s nominal scaling to 15.72 s per lap).
+
+---
+</details>
+
+<details>
+<summary>Automated Data Visualization Outputs</summary>
+
+---
+
+Execution of the model automatically generates and archives four high-resolution assets into the project repository:
+
+- **`fig1_power_distribution.png`**: Stacked horizontal power bar chart illustrating allocation of raw battery wattage across mechanical output, logic rails, and converter thermodynamic losses.
+- **`fig2_sensitivity_heatmap.png`**: 3×3 sensitivity matrix mapping variations in boost and buck efficiencies ($\eta$) against aggregate battery current draw.
+- **`fig3_runtime_comparison.png`**: Categorical bar visualization tracking nominal runtime (**26.3 min**), safe usable runtime down to the 80% DoD floor (**21.0 min**), and strict cumulative competition-day driving requirements (**3.0 min**).
+- **`fig4_per_lap_depletion.png`**: Continuous linear decay plot tracing state-of-charge depletion against consecutive laps. A standard **300 mAh** pack safely guarantees **84.1 laps** (**28.0 full runs**) before breaching the voltage safety floor.
+---
+</details>
 
 ## Software Architecture  
 
