@@ -143,7 +143,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 ---
 
-&emsp;APEX is divided into six vital parts, each part having its respective function.  
+APEX is divided into six vital parts, each part having its respective function.  
 
 <table align="center" border="0">
   <tr>
@@ -156,12 +156,12 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
   </tr>
 </table>
 
-&emsp;🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING}}$ - Redirects the vehicle’s trajectory  
-&emsp;🞙 $\color{#ff9452}\mathbf{\mathsf{ELECTRONICS\ COMPARTMENT}}$ - Houses most of the car’s sensors and electronics  
-&emsp;🞙 $\color{#ffd452}\mathbf{\mathsf{ACTIVE\ DOWNFORCE}}$ - Creates a vacuum at the vehicle's belly  
-&emsp;🞙 $\color{#64d941}\mathbf{\mathsf{POWERTRAIN}}$ - Propels the car forward  
-&emsp;🞙 $\color{#4d95e8}\mathbf{\mathsf{BATTERY\ COMPARTMENT}}$ - Sole electricity supplier for all car components  
-&emsp;🞙 $\color{#9d4de8}\mathbf{\mathsf{VISION\ PROCESSING\ AREA}}$ - Captures and analyses vision  
+🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING}}$ - Redirects the vehicle’s trajectory  
+🞙 $\color{#ff9452}\mathbf{\mathsf{ELECTRONICS\ COMPARTMENT}}$ - Houses most of the car’s sensors and electronics  
+🞙 $\color{#ffd452}\mathbf{\mathsf{ACTIVE\ DOWNFORCE}}$ - Creates a vacuum at the vehicle's belly  
+🞙 $\color{#64d941}\mathbf{\mathsf{POWERTRAIN}}$ - Propels the car forward  
+🞙 $\color{#4d95e8}\mathbf{\mathsf{BATTERY\ COMPARTMENT}}$ - Sole electricity supplier for all car components  
+🞙 $\color{#9d4de8}\mathbf{\mathsf{VISION\ PROCESSING\ AREA}}$ - Captures and analyses vision  
 
 ---
 </details>
@@ -171,7 +171,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 ---
 
-&emsp;A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies &emsp;to secure structural components.  
+A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies to secure structural components.  
 
 <table align="center" border="0">
   <tr>
@@ -184,11 +184,11 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
   </tr>
 </table>
 
-&emsp;Static components (e.g. most of the chassis components) are fixated via snap-to-fit joints.  
-&emsp;They include a 0.1mm buffer gap on every side to allow minimal 3D printing errors.   
-&emsp;Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut assemblies.  
+Static components (e.g. most of the chassis components) are fixated via snap-to-fit joints.  
+They include a 0.1mm buffer gap on every side to allow minimal 3D printing errors.   
+Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut assemblies.  
 
-&emsp;[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
 
 ---
 </details>
@@ -199,9 +199,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 ---
 
-&emsp;Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integrated encoder for precise feedback. Rotational torque is  
-&emsp;transferred 90° via a perpendicular pair of custom nylon-printed miter gears []. The bevel gear is coupled to the differential case, which  
-&emsp;distributes mechanical power to both d-shafts [] while allowing independent wheel rotation, eliminating skidding during cornering.
+Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integrated encoder for precise feedback. Rotational torque is transferred 90° via a perpendicular pair of custom nylon-printed miter gears []. The bevel gear is coupled to the differential case, which distributes mechanical power to both d-shafts [] while allowing independent wheel rotation, eliminating skidding during cornering.
 
 <table align="left" border="0">
   <tr>
@@ -213,7 +211,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 </table>  
 <br clear="left"/>
 
-&emsp;How is rotational power transferred?  
+How is rotational power transferred?  
 
 &emsp;1. N20 motor rotates the pinion gear  
 &emsp;2. The pinion gear rotates the bevel gear, angle shifted 90° clockwise  
@@ -239,8 +237,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 ---
 
-&emsp;Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x side gears [], it is one of the two measures (the other being full  
-&emsp;Ackermann steering, mentioned in Section 2.3) we opted to eliminate tire scrubbing, which improves movement accuracy.
+Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x side gears [], it is one of the two measures (the other being full Ackermann steering, mentioned in Section 2.3) we opted to eliminate tire scrubbing, which improves movement accuracy.
 
 <table align="left" border="0">
   <tr>
