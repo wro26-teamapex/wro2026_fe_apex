@@ -175,8 +175,8 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.1.3).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.1.4).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.1.3).gif" width="400px" /></td>
+    <td align="center"><img src="fig(2.1.4).gif" width="400px" /></td>
   </tr>
   <tr>
     <td align="center"><b>Fig 2.1.3 </b>Snap-to-fit joint example</td>
