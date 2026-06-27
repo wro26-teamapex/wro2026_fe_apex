@@ -42,10 +42,18 @@
 &emsp;8.3 Suggestions for Further Development   
 
 ---
-## Extra Details
-[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)  
-[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=sagemath)](link)  
-[![Components List](https://img.shields.io/badge/⚙%20Components%20List-114580?style=for-the-badge&logo=)](link)
+>[!NOTE]
+>**This repo contains generalized buttons, which provide extra details regarding the design of APEX.**  
+>
+>[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)  
+>🞙 Discussion on pros & cons of the design, comparison with other applicable methods  
+>
+>[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=pulumi)](link)  
+>🞙 Detailed calculations regarding the topic  
+>
+>[![Components List](https://img.shields.io/badge/Components%20List-114580?style=for-the-badge&logo=agentskills)](link)  
+>🞙 Components checklist for the specific section  
+
 
 ---
 
@@ -111,11 +119,143 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 [![Demo Video](https://img.shields.io/badge/Obstacle%20Challenge-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
 
 ---
-## Mobility and Mechanical Design
+## 2. Mobility and Mechanical Design
 
 ### 2.1 Chassis Design
+<details>
+<summary>General Specifications</summary>
+
+---
+
+&emsp;**Dimensions:** 115mm (L) x 80mm (W) x 105mm (H)  
+
+&emsp;**Total Mass:** Xg  
+
+&emsp;**3D printing material:** PETG, Nylon  
+
+&emsp;**Drive configuration:** Front wheel steering, rear wheel drive  
+
+---
+</details>
+
+<details>
+<summary>Vehicle Structure</summary>
+
+---
+
+&emsp;APEX is divided into six vital parts, each part having its respective function.  
+
+<table align="center" border="0">
+  <tr>
+    <td align="center"><img src="fig(2.1.1).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.1.2).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Fig 2.1.1 </b>Chassis Function Distribution (Side) </td>
+    <td align="center"><b>Fig 2.1.2 </b>Chassis Function Distribution (Bottom) </td>
+  </tr>
+</table>
+
+&emsp;🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING}}$ - Redirects the vehicle’s trajectory  
+&emsp;🞙 $\color{#ff9452}\mathbf{\mathsf{ELECTRONICS\ COMPARTMENT}}$ - Houses most of the car’s sensors and electronics  
+&emsp;🞙 $\color{#ffd452}\mathbf{\mathsf{ACTIVE\ DOWNFORCE}}$ - Creates a vacuum at the vehicle's belly  
+&emsp;🞙 $\color{#64d941}\mathbf{\mathsf{POWERTRAIN}}$ - Propels the car forward  
+&emsp;🞙 $\color{#4d95e8}\mathbf{\mathsf{BATTERY\ COMPARTMENT}}$ - Sole electricity supplier for all car components  
+&emsp;🞙 $\color{#9d4de8}\mathbf{\mathsf{VISION\ PROCESSING\ AREA}}$ - Captures and analyses vision  
+
+---
+</details>
+
+<details>
+<summary>Hybrid Fitting Design</summary>
+
+---
+
+&emsp;A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies &emsp;to secure structural components.  
+
+<table align="center" border="0">
+  <tr>
+    <td align="center"><img src="fig(2.1.3).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.1.4).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Fig 2.1.3 </b>Snap-to-fit joint example</td>
+    <td align="center"><b>Fig 2.1.4 </b>Screw-and-nut assembly example</td>
+  </tr>
+</table>
+
+&emsp;Static components (e.g. most of the chassis components) are fixated via snap-to-fit joints.  
+&emsp;They include a 0.1mm buffer gap on every side to allow minimal 3D printing errors.   
+&emsp;Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut assemblies.  
+
+&emsp;[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
+
+---
+</details>
 
 ### 2.2 Powertrain  
+<details>
+<summary>Rear propulsion</summary>
+
+---
+
+&emsp;Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integrated encoder for precise feedback. Rotational torque is  
+&emsp;transferred 90° via a perpendicular pair of custom nylon-printed miter gears []. The bevel gear is coupled to the differential case, which  
+&emsp;distributes mechanical power to both d-shafts [] while allowing independent wheel rotation, eliminating skidding during cornering.
+
+<table align="left" border="0">
+  <tr>
+    <td align="left"><img src="fig(2.2.1).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="left"><b>Fig 2.2.1 </b>Powertrain Components Diagram</td>
+  </tr>
+</table>  
+<br clear="left"/>
+
+&emsp;How is rotational power transferred?  
+
+&emsp;1. N20 motor rotates the pinion gear  
+&emsp;2. The pinion gear rotates the bevel gear, angle shifted 90° clockwise  
+&emsp;3. The attached differential case rotates along the d-shaft  
+&emsp;4. The differential’s planet and sun gears distribute torque to both shafts  
+&emsp;5. The shafts rotate the wheel  
+
+<table align="left" border="0">
+  <tr>
+    <td align="left"><img src="fig(2.2.2).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="left"><b>Fig 2.2.2 </b>Power Transfer Diagram</td>
+  </tr>
+</table>  
+<br clear="left"/>
+
+---
+</details>
+
+<details>
+<summary>The differential</summary>
+
+---
+
+&emsp;Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x side gears [], it is one of the two measures (the other being full  
+&emsp;Ackermann steering, mentioned in Section 2.3) we opted to eliminate tire scrubbing, which improves movement accuracy.
+
+<table align="left" border="0">
+  <tr>
+    <td align="left"><img src="fig(2.2.3).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="left"><b>Fig 2.2.3 </b>Differential Structure Diagram</td>
+  </tr>
+</table>  
+<br clear="left"/>
+
+---
+</details>
+
+[![Components List](https://img.shields.io/badge/Components%20List-114580?style=for-the-badge&logo=agentskills)](link)  
 
 ### 2.3 Steering Mechanism  
 
