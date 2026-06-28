@@ -127,13 +127,13 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 ---
 
-&emsp;**Dimensions:** 115mm (L) x 80mm (W) x 105mm (H)  
+**Dimensions:** 115mm (L) x 80mm (W) x 105mm (H)  
 
-&emsp;**Total Mass:** Xg  
+**Total Mass:** Xg  
 
-&emsp;**3D printing material:** PETG, Nylon  
+**3D printing material:** PETG, Nylon  
 
-&emsp;**Drive configuration:** Front wheel steering, rear wheel drive  
+**Drive configuration:** Front wheel steering, rear wheel drive  
 
 ---
 </details>
@@ -175,8 +175,8 @@ A hybrid fastening strategy for the vehicle components was engineered, combining
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.1.3).gif" width="400px" /></td>
-    <td align="center"><img src="fig(2.1.4).gif" width="400px" /></td>
+    <td align="center"><img src="fig(2.1.3).gif" width="350px" /></td>
+    <td align="center"><img src="fig(2.1.4).gif" width="350px" /></td>
   </tr>
   <tr>
     <td align="center"><b>Fig 2.1.3 </b>Snap-to-fit joint example</td>
@@ -213,11 +213,11 @@ Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integ
 
 How is rotational power transferred?  
 
-&emsp;1. N20 motor rotates the pinion gear  
-&emsp;2. The pinion gear rotates the bevel gear, angle shifted 90° clockwise  
-&emsp;3. The attached differential case rotates along the d-shaft  
-&emsp;4. The differential’s planet and sun gears distribute torque to both shafts  
-&emsp;5. The shafts rotate the wheel  
+1. N20 motor rotates the pinion gear  
+2. The pinion gear rotates the bevel gear, angle shifted 90° clockwise  
+3. The attached differential case rotates along the d-shaft  
+4. The differential’s planet and sun gears distribute torque to both shafts  
+5. The shafts rotate the wheel  
 
 <table align="left" border="0">
   <tr>
