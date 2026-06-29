@@ -249,6 +249,10 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 </table>  
 <br clear="left"/>
 
+Why use the differential?  
+
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
+
 ---
 </details>
 
@@ -256,6 +260,10 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 <summary>Reasoning</summary>
 
 ---
+
+Why use the N20 gear motor with encoder?  
+
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
 
 ---
 </details>
