@@ -195,7 +195,7 @@ Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut 
 
 ### 2.2 Powertrain  
 <details>
-<summary>Rear propulsion</summary>
+<summary>General</summary>
 
 ---
 
@@ -252,9 +252,71 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 ---
 </details>
 
+<details>
+<summary>Reasoning</summary>
+
+---
+
+---
+</details>
+
+<details>
+<summary>Testing Trials</summary>
+
+---
+
+---
+</details>
+
+
 [![Components List](https://img.shields.io/badge/Components%20List-114580?style=for-the-badge&logo=agentskills)](link)  
 
 ### 2.3 Steering Mechanism  
+
+<details>
+<summary>General</summary>
+
+---
+Front wheel steering of APEX is actuated by 1x AGFRC A06CLS Servo Motor []. The design adopts true Ackermann steering, a kinematic configuration to force the inner wheel to turn at a sharper angle than the outer wheel. When both front wheels track along perfect concentric paths, tire scrubbing during turns is neutralised, hence improved movement accuracy.  
+
+Power Transfer Flow:
+
+<table align="center" border="0">
+  <tr>
+    <td align="center"><img src="fig(2.3.1).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.3.2).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.3.3).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.3.4).png" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Fig 2.1.1 </b>Actuation: AGFRC A06CLS outputs precise torque via a high strength, low inertia servo horn</td>
+    <td align="center"><b>Fig 2.1.2 </b>Lateral translation: The servo horn’s arc movement displaces the connector rod horizontally</td>
+    <td align="center"><b>Fig 2.1.3 </b>Knuckle engagement: Horizontal force from the connector rod is transferred to custom steering knuckles</td>
+    <td align="center"><b>Fig 2.1.4 </b>Wheel rotation: The wheel supports, attached to the steering knuckles, is forced to pivot along two steering rods to execute Ackermann steering</td>
+  </tr>
+</table>
+
+---
+</details>
+
+<details>
+<summary>Reasoning</summary>
+
+---
+
+
+---
+</details>
+
+<details>
+<summary>Testing Trials</summary>
+
+---
+
+---
+</details>
+
+[![Components List](https://img.shields.io/badge/Components%20List-114580?style=for-the-badge&logo=agentskills)](link)  
 
 ### 2.4 Stability Improvements
 
