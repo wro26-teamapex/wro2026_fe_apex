@@ -303,7 +303,21 @@ Power Transfer Flow:
 <summary>Reasoning</summary>
 
 ---
+**Why the AGFRC A06CLS?**  
 
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)  
+
+**Why Ackermann Steering?**  
+
+[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)  
+
+**Proof of concept using Ackermann steering geometry conditions**  
+
+[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=pulumi)](link)  
+
+**Theoretical Performance: Minimum steering radius**  
+
+[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=pulumi)](link)  
 
 ---
 </details>
@@ -312,6 +326,10 @@ Power Transfer Flow:
 <summary>Testing Trials</summary>
 
 ---
+
+Iteration 1:  
+Iteration 2:  
+Iteration 3:  
 
 ---
 </details>
