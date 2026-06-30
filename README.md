@@ -147,8 +147,8 @@ APEX is divided into six vital parts, each part having its respective function.
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.1.1).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.1.2).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.1.1).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.1.2).png" width="400px" /></td>
   </tr>
   <tr>
     <td align="center"><b>Fig 2.1.1 </b>Chassis Function Distribution (Side) </td>
@@ -175,8 +175,8 @@ A hybrid fastening strategy for the vehicle components was engineered, combining
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.1.3).gif" width="350px" /></td>
-    <td align="center"><img src="fig(2.1.4).gif" width="350px" /></td>
+    <td align="center"><img src="resources/fig(2.1.3).gif" width="350px" /></td>
+    <td align="center"><img src="resources/fig(2.1.4).gif" width="350px" /></td>
   </tr>
   <tr>
     <td align="center"><b>Fig 2.1.3 </b>Snap-to-fit joint example</td>
@@ -204,11 +204,12 @@ Rear propulsion is driven by 1x N20 gear motor [] equipped with a magnetic quadr
 The driven miter gear is rigidly coupled to the differential case, which houses 2x spider gears and 2x side gears, acting as a mechanical differential to distribute torque to both shafts and eventually both wheels, reducing skidding during cornering. 
 (Further explanation on the differential in the next sub-subsection.)  
 
-Note: All gears used in the setup are custom 3D printed with Nylon 12.
+>**ⓘ Note**  
+>All gears used in the setup are custom 3D printed with Nylon 12.
 
 <table align="left" border="0">
   <tr>
-    <td align="left"><img src="fig(2.2.1).png" width="400px" /></td>
+    <td align="left"><img src="resources/fig(2.2.1).png" width="400px" /></td>
   </tr>
   <tr>
     <td align="left"><b>Fig 2.2.1 </b>Powertrain Components Diagram</td>
@@ -216,22 +217,29 @@ Note: All gears used in the setup are custom 3D printed with Nylon 12.
 </table>  
 <br clear="left"/>
 
-How is rotational power transferred?  
+Step by step description of torque transfer  
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.2.2).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.2.3).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.2.4).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.2.5).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.2.6).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.2.2).png" width="300px" /></td>
+    <td align="center"><img src="resources/fig(2.2.3).png" width="300px" /></td>
+    <td align="center"><img src="resources/fig(2.2.4).png" width="300px" /></td>
+    <td align="center"><img src="resources/fig(2.2.5).png" width="300px" /></td>
+    <td align="center"><img src="resources/fig(2.2.6).png" width="300px" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Fig 2.2.2 </b>Actuation: N20 motor output shaft rotates driving miter gear</td>
-    <td align="center"><b>Fig 2.2.3 </b>Axis shift: Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear</td>
-    <td align="center"><b>Fig 2.2.4 </b>Rigid coupling: Differential case rotates along with the driven miter gear</td>
-    <td align="center"><b>Fig 2.2.5 </b>Torque distribution: Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently</td>
-    <td align="center"><b>Fig 2.2.6 </b>Output: Independently rotating axles drive its respective wheel</td>
+    <td align="center"><b>Fig 2.2.2 </b>Step 1</td>
+    <td align="center"><b>Fig 2.2.3 </b>Step 2</td>
+    <td align="center"><b>Fig 2.2.4 </b>Step 3</td>
+    <td align="center"><b>Fig 2.2.5 </b>Step 4</td>
+    <td align="center"><b>Fig 2.2.6 </b>Step 5</td>
+  </tr>
+    <tr>
+    <td align="left"><b>Actuation: </b><br>N20 motor output shaft rotates driving miter gear</td>
+    <td align="left"><b>Axis shift: </b><br>Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear</td>
+    <td align="left"><b>Rigid coupling: </b><br>Differential case rotates along with the driven miter gear</td>
+    <td align="left"><b>Torque distribution: </b><br>Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently</td>
+    <td align="left"><b>Output: </b><br>Independently rotating axles drive its respective wheel</td>
   </tr>
 </table>
 
@@ -247,7 +255,7 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 
 <table align="left" border="0">
   <tr>
-    <td align="left"><img src="fig(2.2.7).png" width="400px" /></td>
+    <td align="left"><img src="resources/fig(2.2.7).png" width="400px" /></td>
   </tr>
   <tr>
     <td align="left"><b>Fig 2.2.7 </b>Differential Structure Diagram</td>
