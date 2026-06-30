@@ -174,10 +174,10 @@ APEX is divided into six vital parts, each part having its respective function.
 A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies to secure structural components.
 
 <div align="center">
-  <image-card alt="Fig 2.1.3 Snap-to-fit" src="resources/fig_2.1.3.gif" ></image-card>
+  <image-card alt="Fig 2.1.3 Snap-to-fit" src="[resources/fig(2.1.3).gif](https://github.com/wro26-teamapex/WRO2026_FE_Apex/blob/e7f6ff3bc2ea0611472ee7446846e8461708e891/resources/fig(2.1.3).gif)" ></image-card>
   <br><b>Fig 2.1.3</b> Snap-to-fit joint example
 
-  <image-card alt="Fig 2.1.4 Screw-and-nut" src="resources/fig_2.1.4.gif" ></image-card>
+  <image-card alt="Fig 2.1.4 Screw-and-nut" src="[resources/fig(2.1.4).gif](https://github.com/wro26-teamapex/WRO2026_FE_Apex/blob/e7f6ff3bc2ea0611472ee7446846e8461708e891/resources/fig(2.1.4).gif)" ></image-card>
   <br><b>Fig 2.1.4</b> Screw-and-nut assembly example
 </div>
 
