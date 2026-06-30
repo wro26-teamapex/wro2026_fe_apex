@@ -199,7 +199,12 @@ Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut 
 
 ---
 
-Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integrated encoder for precise feedback. Rotational torque is transferred 90° via a perpendicular pair of custom nylon-printed miter gears []. The bevel gear is coupled to the differential case, which distributes mechanical power to both d-shafts [] while allowing independent wheel rotation, eliminating skidding during cornering.
+Rear propulsion is driven by 1x N20 gear motor [] equipped with a magnetic quadrature encoder for real-time rotational feedback. Torque is redirected 90deg from the vertical motor shaft to the horizontal axle via a perpendicular pair of miter gears.  
+
+The driven miter gear is rigidly coupled to the differential case, which houses 2x spider gears and 2x side gears, acting as a mechanical differential to distribute torque to both shafts and eventually both wheels, reducing skidding during cornering. 
+(Further explanation on the differential in the next sub-subsection.)  
+
+Note: All gears used in the setup are custom 3D printed with Nylon 12.
 
 <table align="left" border="0">
   <tr>
@@ -213,21 +218,22 @@ Rear propulsion of APEX is driven by an N20 gear motor [] equipped with an integ
 
 How is rotational power transferred?  
 
-1. N20 motor rotates the pinion gear  
-2. The pinion gear rotates the bevel gear, angle shifted 90° clockwise  
-3. The attached differential case rotates along the d-shaft  
-4. The differential’s planet and sun gears distribute torque to both shafts  
-5. The shafts rotate the wheel  
-
-<table align="left" border="0">
+<table align="center" border="0">
   <tr>
-    <td align="left"><img src="fig(2.2.2).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.2.2).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.2.3).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.2.4).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.2.5).png" width="400px" /></td>
+    <td align="center"><img src="fig(2.2.6).png" width="400px" /></td>
   </tr>
   <tr>
-    <td align="left"><b>Fig 2.2.2 </b>Power Transfer Diagram</td>
+    <td align="center"><b>Fig 2.2.2 </b>Actuation: N20 motor output shaft rotates driving miter gear</td>
+    <td align="center"><b>Fig 2.2.3 </b>Axis shift: Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear</td>
+    <td align="center"><b>Fig 2.2.4 </b>Rigid coupling: Differential case rotates along with the driven miter gear</td>
+    <td align="center"><b>Fig 2.2.5 </b>Torque distribution: Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently</td>
+    <td align="center"><b>Fig 2.2.6 </b>Output: Independently rotating axles drive its respective wheel</td>
   </tr>
-</table>  
-<br clear="left"/>
+</table>
 
 ---
 </details>
@@ -241,10 +247,10 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 
 <table align="left" border="0">
   <tr>
-    <td align="left"><img src="fig(2.2.3).png" width="400px" /></td>
+    <td align="left"><img src="fig(2.2.7).png" width="400px" /></td>
   </tr>
   <tr>
-    <td align="left"><b>Fig 2.2.3 </b>Differential Structure Diagram</td>
+    <td align="left"><b>Fig 2.2.7 </b>Differential Structure Diagram</td>
   </tr>
 </table>  
 <br clear="left"/>
