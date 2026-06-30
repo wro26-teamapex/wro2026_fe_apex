@@ -173,20 +173,13 @@ APEX is divided into six vital parts, each part having its respective function.
 
 A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies to secure structural components.
 
-<table align="center" border="0">
-  <tr>
-    <td align="center">
-      <img src="resources/fig_2.1.3.gif" width="350px" alt="Snap-to-fit joint example" />
-    </td>
-    <td align="center">
-      <img src="resources/fig_2.1.4.gif" width="350px" alt="Screw-and-nut assembly example" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center"><b>Fig 2.1.3</b> Snap-to-fit joint example</td>
-    <td align="center"><b>Fig 2.1.4</b> Screw-and-nut assembly example</td>
-  </tr>
-</table>
+<div align="center">
+  <image-card alt="Fig 2.1.3 Snap-to-fit" src="resources/fig_2.1.3.gif" ></image-card>
+  <br><b>Fig 2.1.3</b> Snap-to-fit joint example
+
+  <image-card alt="Fig 2.1.4 Screw-and-nut" src="resources/fig_2.1.4.gif" ></image-card>
+  <br><b>Fig 2.1.4</b> Screw-and-nut assembly example
+</div>
 
 Static components (e.g. most of the chassis components) are fixated via snap-to-fit joints. They include a 0.1mm buffer gap on every side to allow minimal 3D printing errors. Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut assemblies.
 
