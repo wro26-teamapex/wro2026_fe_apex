@@ -176,10 +176,10 @@ A hybrid fastening strategy for the vehicle components was engineered, combining
 <table align="center" border="0">
   <tr>
     <td align="center">
-      <img src="resources/fig(2.1.3).gif" width="350px" alt="Snap-to-fit joint example" />
+      <img src="resources/fig_2.1.3.gif" width="350px" alt="Snap-to-fit joint example" />
     </td>
     <td align="center">
-      <img src="resources/fig(2.1.4).gif" width="350px" alt="Screw-and-nut assembly example" />
+      <img src="resources/fig_2.1.4.gif" width="350px" alt="Screw-and-nut assembly example" />
     </td>
   </tr>
   <tr>
