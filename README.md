@@ -207,41 +207,49 @@ The driven miter gear is rigidly coupled to the differential case, which houses 
 >**ⓘ Note**  
 >All gears used in the setup are custom 3D printed with Nylon 12.
 
-<table align="left" border="0">
-  <tr>
-    <td align="left"><img src="resources/fig(2.2.1).png" width="400px" /></td>
-  </tr>
-  <tr>
-    <td align="left"><b>Fig 2.2.1 </b>Powertrain Components Diagram</td>
-  </tr>
-</table>  
-<br clear="left"/>
-
 Step by step description of torque transfer  
-
-<table align="center" border="0">
+<table align="center" border="0" style="table-layout: fixed; width: auto;">
   <tr>
-    <td align="center"><img src="resources/fig(2.2.2).png" width="300px" /></td>
-    <td align="center"><img src="resources/fig(2.2.3).png" width="300px" /></td>
-    <td align="center"><img src="resources/fig(2.2.4).png" width="300px" /></td>
-    <td align="center"><img src="resources/fig(2.2.5).png" width="300px" /></td>
-    <td align="center"><img src="resources/fig(2.2.6).png" width="300px" /></td>
+    <td align="center" style="width: 300px; max-width: 300px;"><img src="resources/fig(2.2.2).png" width="300px" /></td>
+    <td align="center" style="width: 300px; max-width: 300px;"><img src="resources/fig(2.2.3).png" width="300px" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Fig 2.2.2 </b>Step 1</td>
-    <td align="center"><b>Fig 2.2.3 </b>Step 2</td>
-    <td align="center"><b>Fig 2.2.4 </b>Step 3</td>
-    <td align="center"><b>Fig 2.2.5 </b>Step 4</td>
-    <td align="center"><b>Fig 2.2.6 </b>Step 5</td>
+    <td align="center" style="width: 300px; max-width: 300px; word-wrap: break-word;"><b>Fig 2.2.2 </b>Step 1</td>
+    <td align="center" style="width: 300px; max-width: 300px; word-wrap: break-word;"><b>Fig 2.2.3 </b>Step 2</td>
   </tr>
-    <tr>
-    <td align="left"><b>Actuation: </b><br>N20 motor output shaft rotates driving miter gear</td>
-    <td align="left"><b>Axis shift: </b><br>Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear</td>
-    <td align="left"><b>Rigid coupling: </b><br>Differential case rotates along with the driven miter gear</td>
-    <td align="left"><b>Torque distribution: </b><br>Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently</td>
-    <td align="left"><b>Output: </b><br>Independently rotating axles drive its respective wheel</td>
+  <tr>
+    <td style="vertical-align: top; text-align: left; width: 300px; max-width: 300px; word-wrap: break-word;"><b>Actuation: </b><br>N20 motor output shaft rotates driving miter gear</td>
+    <td style="vertical-align: top; text-align: left; width: 300px; max-width: 300px; word-wrap: break-word;"><b>Axis shift: </b><br>Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear</td>
   </tr>
 </table>
+<table align="center" border="0" style="table-layout: fixed; width: auto;">
+  <tr>
+    <td align="center" style="width: 300px; max-width: 300px;"><img src="resources/fig(2.2.4).png" width="300px" /></td>
+    <td align="center" style="width: 300px; max-width: 300px;"><img src="resources/fig(2.2.5).png" width="300px" /></td>
+  </tr>
+  <tr>
+    <td align="center" style="width: 300px; max-width: 300px; word-wrap: break-word;"><b>Fig 2.2.4 </b>Step 3</td>
+    <td align="center" style="width: 300px; max-width: 300px; word-wrap: break-word;"><b>Fig 2.2.5 </b>Step 4</td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; text-align: left; width: 200px; max-width: 200px; word-wrap: break-word;"><b>Rigid coupling: </b><br>Differential case rotates along with the driven miter gear</td>
+    <td style="vertical-align: top; text-align: left; width: 200px; max-width: 200px; word-wrap: break-word;"><b>Torque distribution: </b><br>Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently</td>
+  </tr>
+</table>
+<table align="center" border="0" style="table-layout: fixed; width: auto;">
+  <tr>
+    <td align="center" style="width: 300px; max-width: 300px;"><img src="resources/fig(2.2.6).png" width="300px" /></td>
+  </tr>
+  <tr>
+    <td align="center" style="width: 300px; max-width: 300px; word-wrap: break-word;"><b>Fig 2.2.6 </b>Step 5</td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; text-align: left; width: 300px; max-width: 300px; word-wrap: break-word;"><b>Output: </b><br>Independently rotating axles drive its respective wheel</td>
+  </tr>
+</table>
+
+
+
 
 ---
 </details>
