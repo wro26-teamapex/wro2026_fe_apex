@@ -259,7 +259,15 @@ Step by step description of torque transfer
 
 ---
 
-Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x side gears [], it is one of the two measures (the other being full Ackermann steering, mentioned in Section 2.3) we opted to eliminate tire scrubbing, which improves movement accuracy.
+The differential is a mechanism on the rear axle that plays a key part in minimising skidding. It is a complementary implementation along with Ackermann steering to reduce tire scrubbing, as mentioned in the previous sub-subsection.  
+
+>**It consists of:**
+>	- 1x Differential case []  
+>	- 1x Driven miter gear []  
+>	- 2x Spider gear []  
+>	- 2x Side gear []  
+>
+>   All of which are custom 3D printed with Nylon 12 (Differential case with PETG).
 
 <table align="left" border="0">
   <tr>
@@ -271,9 +279,15 @@ Composed of 1x bevel gear [], 1x differential case [], 2x spider gears [] and 2x
 </table>  
 <br clear="left"/>
 
-Why use the differential?  
+Why the differential?
 
-[![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
+During cornering, the car’s outer wheel travels a greater arc length than the inner, hence the inner wheel skids to maintain a smaller arc path at the same velocity of the outer wheel.  
+
+The mechanical differential allows the rear wheels to have independent angular velocities, allowing the inner wheel’s angular velocity to be smaller than the outer wheel’s, hence skidding does not occur.  
+
+For standard WRO vehicles, the differential is a complementary mechanism to slightly improve turning accuracy.   
+
+For APEX, it is mandatory to minimise abrupt vibrations caused by skidding in order to seal the vacuum of the Downforce Chamber. High frequency harmonic vibrations will vent the negative pressure Downforce Chamber, destroying its function of maximising cornering velocity.  
 
 ---
 </details>
@@ -287,6 +301,14 @@ Why use the N20 gear motor with encoder?
 
 [![Design Evaluation](https://img.shields.io/badge/▟%20Design%20Evaluation-CC540E?style=for-the-badge&logo=)](link)
 
+Gearing design & optimization
+
+[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=pulumi)](link)  
+
+Theoretical Performance: Top speeds on best/worst case, open/obstacle challenges  
+
+[![In Depth Calculations](https://img.shields.io/badge/In%20Depth%20Calculations-2A8011?style=for-the-badge&logo=pulumi)](link)  
+
 ---
 </details>
 
@@ -294,6 +316,10 @@ Why use the N20 gear motor with encoder?
 <summary>Testing Trials</summary>
 
 ---
+
+Iteration 1:  
+Iteration 2:  
+Iteration 3:  
 
 ---
 </details>
@@ -313,16 +339,16 @@ Power Transfer Flow:
 
 <table align="center" border="0">
   <tr>
-    <td align="center"><img src="fig(2.3.1).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.3.2).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.3.3).png" width="400px" /></td>
-    <td align="center"><img src="fig(2.3.4).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.3.1).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.3.2).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.3.3).png" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.3.4).png" width="400px" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Fig 2.1.1 </b>Actuation: AGFRC A06CLS outputs precise torque via a high strength, low inertia servo horn</td>
-    <td align="center"><b>Fig 2.1.2 </b>Lateral translation: The servo horn’s arc movement displaces the connector rod horizontally</td>
-    <td align="center"><b>Fig 2.1.3 </b>Knuckle engagement: Horizontal force from the connector rod is transferred to custom steering knuckles</td>
-    <td align="center"><b>Fig 2.1.4 </b>Wheel rotation: The wheel supports, attached to the steering knuckles, is forced to pivot along two steering rods to execute Ackermann steering</td>
+    <td align="center"><b>Fig 2.3.1 </b>Actuation: AGFRC A06CLS outputs precise torque via a high strength, low inertia servo horn</td>
+    <td align="center"><b>Fig 2.3.2 </b>Lateral translation: The servo horn’s arc movement displaces the connector rod horizontally</td>
+    <td align="center"><b>Fig 2.3.3 </b>Knuckle engagement: Horizontal force from the connector rod is transferred to custom steering knuckles</td>
+    <td align="center"><b>Fig 2.3.4 </b>Wheel rotation: The wheel supports, attached to the steering knuckles, is forced to pivot along two steering rods to execute Ackermann steering</td>
   </tr>
 </table>
 
