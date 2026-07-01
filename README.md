@@ -9,11 +9,11 @@
 &emsp;1.2 [Robot Images](https://github.com/wro26-teamapex/WRO2026_FE_Apex#robot-images)  
 &emsp;1.3 [Performance Videos](https://github.com/wro26-teamapex/WRO2026_FE_Apex#performance-videos)  
 
-3. Mobility and Mechanical Design  
-&emsp;2.1 Chassis Design  
-&emsp;2.2 Powertrain  
-&emsp;2.3 Steering Mechanism  
-&emsp;2.4 Stability Improvements  
+3. [Mobility and Mechanical Design](https://github.com/wro26-teamapex/WRO2026_FE_Apex/tree/main#2-mobility-and-mechanical-design)  
+&emsp;2.1 [Chassis Design](https://github.com/wro26-teamapex/WRO2026_FE_Apex/tree/main#21-chassis-design)  
+&emsp;2.2 [Powertrain](https://github.com/wro26-teamapex/WRO2026_FE_Apex/tree/main#22-powertrain)  
+&emsp;2.3 [Steering Mechanism](https://github.com/wro26-teamapex/WRO2026_FE_Apex/tree/main#23-steering-mechanism)  
+&emsp;2.4 [Stability Improvements](https://github.com/wro26-teamapex/WRO2026_FE_Apex/tree/main#24-stability-improvements)  
 
 
 4. Power and Sensor Architecture  
@@ -158,7 +158,7 @@ APEX is divided into six vital parts, each part having its respective function.
 
 🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING}}$ - Redirects the vehicle’s trajectory  
 🞙 $\color{#ff9452}\mathbf{\mathsf{ELECTRONICS\ COMPARTMENT}}$ - Houses most of the car’s sensors and electronics  
-🞙 $\color{#ffd452}\mathbf{\mathsf{ACTIVE\ DOWNFORCE}}$ - Creates a vacuum at the vehicle's belly  
+🞙 $\color{#ffd452}\mathbf{\mathsf{DOWNFORCE\ CHAMBER}}$ - Creates a vacuum at the vehicle's belly for active downforce  
 🞙 $\color{#64d941}\mathbf{\mathsf{POWERTRAIN}}$ - Propels the car forward  
 🞙 $\color{#4d95e8}\mathbf{\mathsf{BATTERY\ COMPARTMENT}}$ - Sole electricity supplier for all car components  
 🞙 $\color{#9d4de8}\mathbf{\mathsf{VISION\ PROCESSING\ AREA}}$ - Captures and analyses vision  
@@ -173,13 +173,16 @@ APEX is divided into six vital parts, each part having its respective function.
 
 A hybrid fastening strategy for the vehicle components was engineered, combining simple snap-to-fit joints and screw-and-nut assemblies to secure structural components.
 
-<div align="center">
-  <image-card alt="Fig 2.1.3 Snap-to-fit" src="[resources/fig(2.1.3).gif](https://github.com/wro26-teamapex/WRO2026_FE_Apex/blob/e7f6ff3bc2ea0611472ee7446846e8461708e891/resources/fig(2.1.3).gif)" ></image-card>
-  <br><b>Fig 2.1.3</b> Snap-to-fit joint example
-
-  <image-card alt="Fig 2.1.4 Screw-and-nut" src="[resources/fig(2.1.4).gif](https://github.com/wro26-teamapex/WRO2026_FE_Apex/blob/e7f6ff3bc2ea0611472ee7446846e8461708e891/resources/fig(2.1.4).gif)" ></image-card>
-  <br><b>Fig 2.1.4</b> Screw-and-nut assembly example
-</div>
+<table align="center" border="0">
+  <tr>
+    <td align="center"><img src="resources/fig(2.1.3).gif" width="400px" /></td>
+    <td align="center"><img src="resources/fig(2.1.4).gif" width="400px" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Fig 2.1.3 </b>Snap-to-fit example</td>
+    <td align="center"><b>Fig 2.1.4 </b>Screw & nut example</td>
+  </tr>
+</table>
 
 Static components (e.g. most of the chassis components) are fixated via snap-to-fit joints. They include a 0.1mm buffer gap on every side to allow minimal 3D printing errors. Dynamic components (e.g. servo motor & N20 motor) are fixated via screw-and-nut assemblies.
 
@@ -197,7 +200,7 @@ Static components (e.g. most of the chassis components) are fixated via snap-to-
 Rear propulsion is driven by 1x N20 gear motor [] equipped with a magnetic quadrature encoder for real-time rotational feedback. Torque is redirected 90deg from the vertical motor shaft to the horizontal axle via a perpendicular pair of miter gears.  
 
 The driven miter gear is rigidly coupled to the differential case, which houses 2x spider gears and 2x side gears, acting as a mechanical differential to distribute torque to both shafts and eventually both wheels, reducing skidding during cornering. 
-(Further explanation on the differential in the next sub-subsection.)  
+(In depth explanation on the differential in the next sub-subsection.)  
 
 >**ⓘ Note**  
 >All gears used in the setup are custom 3D printed with Nylon 12.
@@ -207,17 +210,22 @@ The driven miter gear is rigidly coupled to the differential case, which houses 
 | ![](resources/fig(2.2.2).png) | ![](resources/fig(2.2.3).png) |
 |---|---|
 | **Fig 2.2.2** Step 1 | **Fig 2.2.3** Step 2 |
-| **Actuation:** N20 motor output shaft rotates driving miter gear | **Axis shift:** Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear |
+| **Actuation:** N20 motor output shaft rotates driving miter gear | **Axis shift:** Driving miter gear shifts rotational axis 90deg clockwise to the driven miter gear |  
 
 | ![](resources/fig(2.2.4).png) | ![](resources/fig(2.2.5).png) |
 |---|---|
 | **Fig 2.2.4** Step 3 | **Fig 2.2.5** Step 4 |
 | **Rigid coupling:** Differential case rotates along with the driven miter gear | **Torque distribution:** Differential case sweep the two spider gears along its rotational axis, side gears are rotated independently |
 
-| ![](resources/fig(2.2.6).png) |---|
-|---|---|
-| **Fig 2.2.6** Step 5 |---|
-| **Output:** Independently rotating axles drive its respective wheel |---|
+<table align="center" border="0">
+  <tr>
+    <td align="center"><img src="resources/fig(2.2.6).png" width="500px" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Fig 2.2.6 </b>Independently rotating axles drive its respective wheel</td>
+  </tr>
+</table>
+
 ---
 </details>
 
@@ -226,7 +234,8 @@ The driven miter gear is rigidly coupled to the differential case, which houses 
 
 ---
 
-The differential is a mechanism on the rear axle that plays a key part in minimising skidding. It is a complementary implementation along with Ackermann steering to reduce tire scrubbing, as mentioned in the previous sub-subsection.  
+The differential is a mechanism on the rear axle that plays a key part in minimising skidding. It is a complementary implementation along with Ackermann steering to reduce tire scrubbing.
+(In depth explanation on Ackermann steering in the next subsection)
 
 >**It consists of:**
 >	- 1x Differential case []  
