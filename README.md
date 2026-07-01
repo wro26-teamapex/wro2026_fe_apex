@@ -61,7 +61,12 @@
 We are a team of three enthusiastic students from **St. Paul’s College, Hong Kong**, participating in the World Robot Olympiad (WRO) Future Engineers category. United by our passion for robotics, innovation, and problem-solving, we strive to learn, collaborate, and break our limits in this international competition. We are proud to represent our school and look forward to competing and connecting with fellow robotics enthusiasts from around the world.
 
 ### Contributions
-| Tin Shing Kwan, Amos | Tsang Kwok Cho, Hugo | Tsang Suen Hoi, Jasper |
+
+| Mr. H.T. Tsui |
+| :---: |
+| **Team Coach**: Maths and ICT teacher at St. Paul's College |
+
+| Tin Shing Kwan, Amos (Team Lead)| Tsang Kwok Cho, Hugo | Tsang Suen Hoi, Jasper |
 | :---: | :---: | :---: |
 | Mechanical Design, Circuit Design, 3D Modelling, Sensor Integration | Software Engineering, MathWorks® Modeling, Mechanical Improvement, Documentation | Wiring, Iteration and Testing, Logistics, Documentation |
 
@@ -133,7 +138,7 @@ Our dual MCU design splits workloads cleanly to minimise delays. The Raspberry P
 
 **3D printing material:** PETG, Nylon  
 
-**Drive configuration:** Front wheel steering, rear wheel drive  
+**Drive configuration:** Front wheel steer, rear wheel drive  
 
 ---
 </details>
@@ -156,7 +161,7 @@ APEX is divided into six vital parts, each part having its respective function.
   </tr>
 </table>
 
-🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING}}$ - Redirects the vehicle’s trajectory  
+🞙 $\color{#ff5252}\mathbf{\mathsf{STEERING\ AREA}}$ - Redirects the vehicle’s trajectory  
 🞙 $\color{#ff9452}\mathbf{\mathsf{ELECTRONICS\ COMPARTMENT}}$ - Houses most of the car’s sensors and electronics  
 🞙 $\color{#ffd452}\mathbf{\mathsf{DOWNFORCE\ CHAMBER}}$ - Creates a vacuum at the vehicle's belly for active downforce  
 🞙 $\color{#64d941}\mathbf{\mathsf{POWERTRAIN}}$ - Propels the car forward  
@@ -222,7 +227,10 @@ The driven miter gear is rigidly coupled to the differential case, which houses 
     <td align="center"><img src="resources/fig(2.2.6).png" width="500px" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Fig 2.2.6 </b>Independently rotating axles drive its respective wheel</td>
+    <td align="left"><b>Fig 2.2.6</b> Step 5</td>
+  </tr>
+  <tr>
+    <td align="left"><b>Output: </b>Independently rotating axles drive its respective wheel</td>
   </tr>
 </table>
 
